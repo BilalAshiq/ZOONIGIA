@@ -1,0 +1,241 @@
+
+/* Hero Section Animation */
+.hero {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Register Form Tab Animation */
+.register-form {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Button Hover Animation */
+.btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #007BFF;
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*  TEXT ANIMATIONS    */
+
+.typing-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Typing Effect */
+.typing-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #333;
+  width: 0;
+  animation: typing 4s steps(30, end) 1s forwards, blink 0.8s step-end infinite;
+}
+
+/* Typing keyframe */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+  }
+}
+
+
+
+/*   REGISTER SECTIONS ANIMATIONS   */
+.fade-in-section, .fade-in-left, .fade-in-right, .slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
+.fade-in-right {
+  transform: translateX(50px);
+}
+
+.slide-in {
+  transform: translateY(50px);
+}
+
+/* When visible */
+.animate {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+
+/* EVENT CARD ANIMATIONS */
+
+.event-card {
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+.event-card.animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/*   COURSES SECTION ANIMATION   */
+.courses-section {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transform-origin: left;
+  transition: transform 0.9s ease-out, opacity 0.9s ease-out;
+  backface-visibility: hidden;
+}
+
+.courses-section.animate {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+
+/*   TOUR SECTION ANIMATION    */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tour-section {
+  opacity: 0;
+  transform: translateY(30px); /* Starts 30px down */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.tour-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Partner with Zoonigia */
+/* General Animation for Partner Section */
+.partner-section {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInUp 1s ease-out forwards;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure no conflicting media query overrides the animation */
+@media (max-width: 768px) {
+  .partner-section {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInUp 1s ease-out forwards; /* Ensure this animation is still applied on smaller screens */
+  }
+}
+
+
+/* ZOONIGIA SHOP */
+.shop-section {
+  opacity: 0;
+  transform: scale(0.9); /* Start scaled down */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.shop-section.animate {
+  opacity: 1;
+  transform: scale(1); /* Scale to normal size */
+}
+
+/* Explore Our Campaigns */
+.campaigns-section {
+  opacity: 0;
+  transform: translateY(50px); /* Start from below */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.campaigns-section.animate {
+  opacity: 1;
+  transform: translateY(0); /* Move to the original position */
+}
+
+/* Get in touch */
+.contact-section {
+  opacity: 0;
+  transform: scale(0.8); /* Start zoomed out */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.contact-section.animate {
+  opacity: 1;
+  transform: scale(1); /* Zoom to normal size */
+}
+
